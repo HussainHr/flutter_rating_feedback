@@ -22,4 +22,9 @@ class FeedbackData {
       'additionalData': additionalData,
     };
   }
+
+  @override
+  String toString() {
+    return 'FeedbackData(rating: $rating, comment: $comment, userEmail: $userEmail)';
+  }
 }
