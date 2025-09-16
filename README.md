@@ -23,7 +23,7 @@
     
     yaml
     dependencies:
-    flutter_rating_feedback: ^1.0.0
+    flutter_rating_feedback: ^0.0.1
     
     Then run:
     bash
