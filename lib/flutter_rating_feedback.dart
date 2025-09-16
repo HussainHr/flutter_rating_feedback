@@ -1,5 +1,5 @@
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+library flutter_rating_feedback;
+
+export 'src/rating_feedback_widget.dart';
+export 'src/models/feedback_data.dart';
+export 'src/models/rating_config.dart';

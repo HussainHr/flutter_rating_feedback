@@ -1,39 +1,96 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+Flutter Rating Feedback
+Show Image
+Show Image
+Show Image
+A beautiful, customizable, and easy-to-use rating and feedback widget for Flutter applications. Collect user ratings and feedback with just one tap - perfect for app store ratings, user experience surveys, and customer feedback collection.
+✨ Features
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+⭐ Interactive Star Rating - Smooth animated star selection
+💬 Optional Comment Field - Let users provide detailed feedback
+📧 Email Collection - Optionally collect user email addresses
+🎨 Fully Customizable - Colors, text, icons, and layout
+🔄 Smooth Animations - Beautiful entrance and interaction animations
+📱 Cross Platform - Works on iOS, Android, Web, and Desktop
+🚀 Easy Integration - Just one line of code to show the dialog
+📊 Structured Data - Get feedback data in a structured format
+🎯 Additional Metadata - Pass custom data for analytics
+💾 No Dependencies - Pure Flutter implementation
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+Default ThemeCustom ThemeWith Email FieldShow ImageShow ImageShow Image
+🚀 Getting Started
+Installation
+Add this to your package's pubspec.yaml file:
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+yaml
+dependencies:
+flutter_rating_feedback: ^1.0.0
 
-## Features
+Then run:
+bash
+flutter pub get
+Import
+dart
+import 'package:flutter_rating_feedback/flutter_rating_feedback.dart';
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+📋 Usage
+Basic Usage
+The simplest way to show a rating dialog:
 
-## Getting started
+dart
+final result = await RatingFeedbackWidget.show(context);
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+if (result != null) {
+    print('User rated: ${result.rating} stars');
+    print('Comment: ${result.comment}');
+    print('Email: ${result.userEmail}');
+}
 
-## Usage
+Custom Configuration
+Customize the appearance and behavior:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+final result = await RatingFeedbackWidget.show(
+    context,
+    config: RatingConfig(
+        title: 'Rate Our App',
+        subtitle: 'Your feedback helps us improve',
+        primaryColor: Colors.purple,
+        backgroundColor: Colors.white,
+        starIcon: Icons.favorite,
+        showEmailField: true,
+        showCommentField: true,
+        submitButtonText: 'Send Feedback',
+        cancelButtonText: 'Maybe Later',
+    ),
+    additionalData: {
+        'userId': '12345',
+        'appVersion': '1.0.0',
+        'screen': 'home_page',
+    },
+);
 
-```dart
-const like = 'sample';
-```
+📱 Platform Support
 
-## Additional information
+✅ Android - Fully supported
+✅ iOS - Fully supported
+✅ Web - Fully supported
+✅ macOS - Fully supported
+✅ Windows - Fully supported
+✅ Linux - Fully supported
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+🐛 Issues and Feedback
+If you encounter any issues or have suggestions:
+
+🐛 Report bugs
+💡 Request features
+📧 Email support
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+🙋‍♂️ Author
+Hussainur Rahman
+📧 your.email@example.com
+🐦 @HussainHr
+🌟 Show Your Support
+Give a ⭐️ if this project helped you!
+
+Made with ❤️ and Flutter
